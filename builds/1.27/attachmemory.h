@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <iostream>
 #include <tlhelp32.h>
+#include <sys/stat.h>
 
 /*
           _   _             _     __  __                                 
@@ -11,7 +12,7 @@
  /_/    \_\__|\__\__,_|\___|_| |_|_|  |_|\___|_| |_| |_|\___/|_|   \__, |
                                                                     __/ |
                                                                    |___/ 
-	AttachMemory 1.25 C++ API Source Code
+	AttachMemory 1.27 C++ API Source Code
 	Written By 2cash
 
 	- Contact -
@@ -49,9 +50,17 @@ namespace AttachMem
 		return 0;
 	}
 
+	// Check if File Exists
+	bool fileExists(const std::string& file) {
+		struct stat buf;
+		return (stat(file.c_str(), &buf) == 0);
+	}
+
 	// Inserts Mmeory Into The Process
 	bool InsertMemory(DWORD procID, char *File)
 	{
+		if (!fileExists(File)) return false;
+
 		HMODULE hLocKernel32 = GetModuleHandle("Kernel32");
 		FARPROC hLocLoadLibrary = GetProcAddress(hLocKernel32, "LoadLibraryA");
 		HANDLE hProc = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_READ | PROCESS_VM_WRITE | PROCESS_VM_OPERATION, FALSE, procID);

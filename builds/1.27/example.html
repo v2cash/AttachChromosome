@@ -22,7 +22,14 @@
 
 <font color="blue">if</font> (AttachMem::GetProcessID(<font color="red">"steam"</font>))
 {
-AttachMem::InsertMemory(AttachMem::GetProcessID(<font color="red">"steam"</font>), <font color="red">"C:/steamunlocker.dll"</font>);	
+  <font color="blue">if</font> (AttachMem::InsertMemory(AttachMem::GetProcessID(<font color="red">"steam"</font>), <font color="red">"C:/steamunlocker.dll"</font>))
+  {
+    <font color="green">// Success Binary Injected!!</font>
+  }
+  <font color="blue">else</font>
+  {
+    <font color="green">// Something went wrong :(</font>
+  }
 }
 	
 	</code></pre>

@@ -20,7 +20,7 @@
 	<pre><code>
 #include <font color="red">"attachmemory.h"</font>;
 
-<font color="blue">if</font> (AttachMem::GetProcessID(<font color="red">"steam"</font>))
+<font color="blue">if</font> (AttachMem::GetProcessID(<font color="red">"steam"</font>) != <font color="green">0</font>)
 {
 AttachMem::InsertMemory(AttachMem::GetProcessID(<font color="red">"steam"</font>), <font color="red">"C:/steamunlocker.dll"</font>);	
 }

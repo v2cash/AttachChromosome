@@ -1,0 +1,45 @@
+
+<html>
+<head>
+	<title>AttachMemory</title>
+	<link rel="stylesheet" type="text/css" href="../../styles.css"/>
+	<a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+</head>
+<body id="index-page">
+	<section id="header">
+		<img src="../../logo.png"></img>
+		<h1>AttachMemory</h1>
+		<h3>C++ Command line Based Injector By 2cash</h3>
+	</section>
+
+	<section id="content">
+		<p>The source of AttachMemory has been requested alot, So we have made a C++ API for you to enjoy.<p>
+	</section>
+	
+	<h3>API Usage Example</h3>
+	<pre><code>
+#include <font color="red">"attachmemory.h"</font>;
+
+<font color="blue">if</font> (AttachMem::GetProcessID(<font color="red">"steam"</font>) != <font color="green">0</font>)
+{
+  <font color="blue">if</font> (AttachMem::InsertMemory(AttachMem::GetProcessID(<font color="red">"steam"</font>), <font color="red">"C:/steamunlocker.dll"</font>))
+  {
+    <font color="green">// Success Binary Injected!!</font>
+  }
+  <font color="blue">else</font>
+  {
+    <font color="green">// Something went wrong :(</font>
+  }
+}
+	
+	</code></pre>
+	
+	<section id="versions">
+		<h3>Download C++ AttachMemory Source</h3>
+		<p>The Most Curent Build of AttachMemory's C++ API Source</p>
+		<h4><a href="./attachmemory.h">Download header file (c++)</a>
+		<h4><a href="#">Download header file (c#)(Coming soon)</a>
+		<h4><a href="../../index.html">Go Back</a>
+	</section>
+</body>
+</html>

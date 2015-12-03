@@ -20,8 +20,8 @@
 	<pre><code>
 #include <font color="red">"attachmemory.h"</font>;
 
-<font color="blue">char</font>* InjectionResult = AttachMem::InsertMemory(AttachMem::GetProcessID(<font color="red">steam"</font>), <font color="red">"C:/ThisDLL.dll"</font>);
-	<font color="blue">if</font> ( InjectionResult != <font color="red">ATTACHMEMORY_RESULT_OK"</font> )
+<font color="blue">char</font>* InjectionResult = AttachMem::InsertMemory(AttachMem::GetProcessID(<font color="red">"steam"</font>), <font color="red">"C:/ThisDLL.dll"</font>);
+	<font color="blue">if</font> ( InjectionResult != <font color="red">"ATTACHMEMORY_RESULT_OK"</font> )
 	cout << <font color="red">"Error, Reason: "</font> << InjectionResult;
 	
 	</code></pre>
